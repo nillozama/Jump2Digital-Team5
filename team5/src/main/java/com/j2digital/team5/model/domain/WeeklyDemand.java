@@ -17,12 +17,12 @@ public class WeeklyDemand {
 	
 	@Id
 	private String id;
-	private String center_id;
-	private String meal_id;
-	private double checkout_price;
-	private double base_price;
-	private boolean emailer_for_promotion;
-	private String homepage_featured;
-	private int num_orders;
+	private String centerId;
+	private String mealId;
+	private double checkoutPrice;
+	private double basePrice;
+	private boolean emailerForPromotion;
+	private String homepageFeatured;
+	private int numOrders;
 
 }
