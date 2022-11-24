@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.j2digital.team5.exceptions.AttributeException;
-import com.j2digital.team5.security.domain.User;
+import com.j2digital.team5.security.domain.Usuario;
 import com.j2digital.team5.security.dto.CreateUserDto;
 import com.j2digital.team5.security.dto.JwtTokenDto;
 import com.j2digital.team5.security.dto.LoginUserDto;
@@ -28,7 +28,7 @@ public class AuthController {
 	
     @PostMapping("/create")
     public ResponseEntity<Mensaje> create(@Valid @RequestBody CreateUserDto dto) throws AttributeException {
-        User usuario = userService.create(dto);
+        Usuario usuario = userService.create(dto);
         return ResponseEntity.ok(new Mensaje(HttpStatus.OK, "user " + usuario.getUsername() + " have been created"));
     }
 

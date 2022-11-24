@@ -13,7 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.j2digital.team5.exceptions.AttributeException;
-import com.j2digital.team5.security.domain.User;
+import com.j2digital.team5.security.domain.Usuario;
 import com.j2digital.team5.security.dto.CreateUserDto;
 import com.j2digital.team5.security.dto.JwtTokenDto;
 import com.j2digital.team5.security.dto.LoginUserDto;
@@ -37,18 +37,18 @@ public class UserService {
 	AuthenticationManager authenticationManager;
 	
 
-	public User create(CreateUserDto dto) throws AttributeException {
+	public Usuario create(CreateUserDto dto) throws AttributeException {
 		if (userRepo.existsByUsername(dto.getUsername()))
 			throw new AttributeException("username already in use");
 
 		return userRepo.save(mapUserFromDto(dto));
 	}
 	
-	private User mapUserFromDto(CreateUserDto dto) {
+	private Usuario mapUserFromDto(CreateUserDto dto) {
 
 		String password = passwordEncoder.encode(dto.getPassword());
 		List<Rol> roles = dto.getRoles().stream().map(rol -> Rol.valueOf(rol)).collect(Collectors.toList());
-		return new User(dto.getUsername(), password, roles);
+		return new Usuario(dto.getUsername(), password, roles);
 	}
 	
 	
@@ -60,13 +60,16 @@ public class UserService {
 		return new JwtTokenDto(token);
 	}
 
-	public Optional<User> getUser(String name) {
+	public Optional<Usuario> getUser(String name) {
 		return userRepo.findByUsername(name);
 	}
-	public User saveUser(User usuario) {
+	public Usuario saveUser(Usuario usuario) {
 		return userRepo.save(usuario);
 	}
-	public List<User> getAllUsers(){
+	public List<Usuario> getAllUsers(){
 		return userRepo.findAll();
+	}
+	public List<Usuario> getClientes(){
+		return userRepo.findByRoles(Rol.ROLE_USER);
 	}
 }

@@ -4,6 +4,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import com.j2digital.team5.model.domain.Product;
 
-public interface MealRepository extends MongoRepository<Product,String>{
-
+public interface ProductRepository extends MongoRepository<Product,String>{
+	Product findByName(String name);
 }
