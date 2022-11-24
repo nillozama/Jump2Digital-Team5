@@ -13,5 +13,6 @@ public class Meal {
 	
 	@Id
 	private String meal_id;
+	
 
 }
