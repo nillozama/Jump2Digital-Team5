@@ -13,6 +13,7 @@ public class Meal {
 	
 	@Id
 	private String meal_id;
-	
+	private String category;
+	private String cuisine;
 
 }
