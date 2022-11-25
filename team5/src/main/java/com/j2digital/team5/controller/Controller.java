@@ -39,4 +39,9 @@ public class Controller {
 	public List<Usuario> getClientes() {
 		return userService.getClientes();
 	}
+	@GetMapping("/getCenters")
+	public List<CenterInfo> getCenters(){
+		return marketService.getAllCenters();
+	}
+	
 }

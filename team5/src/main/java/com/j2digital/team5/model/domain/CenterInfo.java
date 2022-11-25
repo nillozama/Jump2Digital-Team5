@@ -16,11 +16,11 @@ import lombok.Setter;
 public class CenterInfo {
 	
 	@Id
-	private int center_id;
-	private int city_code;
-	private int region_code;
+	private String center_id;
+	private String city_code;
+	private String region_code;
 	private String center_type;
-	private double op_area;
+	private String op_area;
 	
 //	center_id,city_code,
 //	region_code,center_type,op_area
