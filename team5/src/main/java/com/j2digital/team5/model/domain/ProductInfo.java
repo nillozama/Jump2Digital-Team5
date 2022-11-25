@@ -13,7 +13,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @Document (collection="productInfo")
 public class ProductInfo {
+	
+	private int meal_id;
 	private String category;
-	private String cusine;
-	private String description;
+	private String cuisine;
 }

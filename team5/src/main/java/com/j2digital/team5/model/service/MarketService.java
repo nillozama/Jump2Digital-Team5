@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.j2digital.team5.model.domain.Center;
+import com.j2digital.team5.model.domain.CenterInfo;
 import com.j2digital.team5.model.domain.Product;
 import com.j2digital.team5.model.domain.ShoppingCart;
 import com.j2digital.team5.model.domain.WeeklyDemand;
@@ -30,7 +30,7 @@ public class MarketService {
 		return shoppingCartRepository.findAll();
 	}
 	
-	public List<Center> getAllCenters(){
+	public List<CenterInfo> getAllCenters(){
 		return centerRepository.findAll();		
 	}
 	
