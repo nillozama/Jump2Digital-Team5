@@ -39,4 +39,3 @@ public class AuthController {
         return ResponseEntity.ok(jwtTokenDto);
     }
 }
-// 172.20.10.9
