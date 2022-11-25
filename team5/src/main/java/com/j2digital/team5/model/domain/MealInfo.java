@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document (collection="mealInfo")
+@Document (collection="MealInfo")
 public class MealInfo {
 	
 	private String meal_id;

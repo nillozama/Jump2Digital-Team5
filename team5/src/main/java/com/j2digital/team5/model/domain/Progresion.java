@@ -9,15 +9,12 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-@Document (collection="countCorder")
-public class Count {
+@AllArgsConstructor
+@Document (collection="progresion")
+public class Progresion {
+	private String porcentaje_dif_interanual_type_A_x;
+	private String porcentaje_dif_interanual_type_A_y;
+	private String porcentaje_dif_interanual_type_A;
 	
-	private String centerId;
-	private String cityCode;
-	private String regionCode;
-	private String centerType;
-	private String opArea;
-
 }

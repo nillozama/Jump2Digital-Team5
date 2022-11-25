@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document (collection="centerInfo")
+@Document (collection="CenterInfo")
 public class CenterInfo {
 	
 	@Id

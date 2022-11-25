@@ -8,6 +8,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import com.j2digital.team5.model.domain.CenterInfo;
 
 public interface CenterRepository extends MongoRepository<CenterInfo,String>{
-	List<CenterInfo> findByCityCode(String cityCode);
-	List<CenterInfo> findByCenterType(String centerType);
+
 }

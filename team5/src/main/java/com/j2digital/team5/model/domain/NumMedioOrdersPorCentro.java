@@ -11,13 +11,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document (collection="countCorder")
-public class Count {
-	
-	private String centerId;
-	private String cityCode;
-	private String regionCode;
-	private String centerType;
-	private String opArea;
-
+@Document (collection="numMedioOrdersPorCentro")
+public class NumMedioOrdersPorCentro {
+	private String center_type;
+	private String num_orders;
 }
