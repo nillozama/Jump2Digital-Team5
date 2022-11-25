@@ -12,15 +12,15 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document (collection="center_info")
+@Document (collection="centerInfo")
 public class CenterInfo {
 	
 	@Id
-	private String center_id;
-	private String city_code;
-	private String region_code;
-	private String center_type;
-	private String op_area;
+	private String centerId;
+	private String cityCode;
+	private String regionCode;
+	private String centerType;
+	private String opArea;
 	
 //	center_id,city_code,
 //	region_code,center_type,op_area

@@ -11,10 +11,13 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document (collection="productInfo")
-public class ProductInfo {
+@Document (collection="checkout")
+public class Checkout {
 	
-	private int meal_id;
+	private String id;
+	private String centerType;
 	private String category;
-	private String cuisine;
+	private String num_orders;
+	private String checkoutPrice;
+
 }
