@@ -7,7 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.j2digital.team5.security.domain.User;
+import com.j2digital.team5.security.domain.Usuario;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,7 +27,7 @@ public class UsuarioPrincipal implements UserDetails {
 	private Collection<? extends GrantedAuthority> authorities;
 
 	// no construye, devuelve un details de un usuario
-	public static UsuarioPrincipal build(User user) {
+	public static UsuarioPrincipal build(Usuario user) {
 		Collection<GrantedAuthority> authorities = 
 				user.getRoles().stream()
 				.map(rol -> new SimpleGrantedAuthority(rol.name()))

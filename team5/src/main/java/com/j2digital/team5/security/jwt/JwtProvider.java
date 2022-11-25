@@ -43,7 +43,7 @@ public class JwtProvider {
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(new Date().getTime() + expiration * 1000))
                 .claim("roles",getRoles(usuarioPrincipal))
-                .claim("it ", "academy")
+                //.claim("it", "academy")
                 .compact();
     }
 

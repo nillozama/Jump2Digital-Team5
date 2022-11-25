@@ -8,20 +8,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document (collection="center")
-public class Center {
+@Document(collection = "Address")
+public class Address {
 	
 	@Id
-	private String center_id;
+	private String id;
 	private String cityCode;
-	private String region_code;
-	private String centerType;
-	private String op_area;
-	private int percentage_demand;
+	private String regionCode;
 	
 	
 }

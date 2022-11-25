@@ -13,7 +13,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Document (collection="users")
-public class User {
+public class Usuario {
 	
 	@Id
 	private String id;
@@ -21,8 +21,7 @@ public class User {
 	private String password;
 	private List<Rol> roles;
 	
-	public User(String username, String password, List<Rol>roles) {
-		
+	public Usuario(String username, String password, List<Rol>roles) {	
 		this.username=username;
 		this.password=password;
 		this.roles=roles;
