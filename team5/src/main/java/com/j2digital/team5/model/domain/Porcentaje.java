@@ -9,11 +9,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-@Document (collection="productInfo")
-public class ProductInfo {
-	private String category;
-	private String cusine;
-	private String description;
+@AllArgsConstructor
+@Document (collection="porcentaje")
+public class Porcentaje {
+	private String center_type;
+	private String porcentaje_descuento;
 }

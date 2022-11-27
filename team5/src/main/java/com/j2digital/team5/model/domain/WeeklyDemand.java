@@ -1,6 +1,5 @@
 package com.j2digital.team5.model.domain;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
@@ -12,17 +11,20 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection="demands")
+@Document(collection="weeklyDemand")
 public class WeeklyDemand {
 	
-	@Id
 	private String id;
+	private String week;
 	private String centerId;
-	private String mealId;
-	private double checkoutPrice;
-	private double basePrice;
-	private boolean emailerForPromotion;
+	private String mealId ;
+	private String checkoutPrice;
+	private String basePrice;
+	private String emailerForPromotion;
 	private String homepageFeatured;
-	private int numOrders;
-
+	private String numOrders;
+	/*
+	id,week,centerId,mealId,checkoutPrice,
+	basePrice,emailerForPromotion,homepageFeatured,numOrders
+	*/
 }

@@ -1,6 +1,5 @@
 package com.j2digital.team5.model.domain;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
@@ -12,16 +11,13 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document (collection="center")
-public class Center {
+@Document (collection="checkout")
+public class Checkout {
 	
-	@Id
-	private String center_id;
-	private String cityCode;
-	private String region_code;
+	private String id;
 	private String centerType;
-	private String op_area;
-	private int percentage_demand;
-	
-	
+	private String category;
+	private String num_orders;
+	private String checkoutPrice;
+
 }
